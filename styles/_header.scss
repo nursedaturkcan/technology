@@ -1,0 +1,30 @@
+.header {
+    height: 85vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-dark, 1), rgba($color-primary-light, 1));
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    height: 85vh;
+    background-image: radial-gradient(circle 610px at 5.2% 51.6%, #050872 0%, rgba(7, 3, 53, 1) 97.5%);
+    clip-path: polygon(50% 0%, 100% 0, 100% 80%, 0 100%, 0 80%, 0% 60%, 0 0);
+
+    // https://bennettfeely.com/clippy/ adresinden faydalandım.
+    &-logo-box {
+        position: absolute;
+         top: -2rem;
+        left: 2rem;
+
+        &-img {
+            height: 15.5rem;
+
+        }
+    }
+
+    &-text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+}

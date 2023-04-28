@@ -1,0 +1,47 @@
+
+@mixin clearfix{
+    &::after{
+        content:" ";
+        display: table;
+        clear: both;
+    }
+}
+// child'ı parentin içinde ortlamak
+@mixin sayfadaOrtalama{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+//======= media query management===========
+// 0-600px:     phone
+//600-900px:    tablet portrait
+//900-1200px:   Tablet Landscape
+//1200-1800px : normal screen
+//1800+:        big desktop
+
+@mixin responsive($device) {
+    @if $device == "phone" {
+      @media only screen and (max-width: 600px) {
+        @content;
+      }
+    }
+    @else if $device == "tab-port" {
+      @media only screen and (max-width: 900px) {
+        @content;
+      }
+    }
+    @else if $device == "tab-land"{
+      @media only screen and (max-width: 1200px) {
+        @content;
+      }
+    }
+    @else if $device == "big-desktop" {
+      @media only screen and (max-width: 1800px) {
+        @content;
+      }
+    }
+  }
+  
+  

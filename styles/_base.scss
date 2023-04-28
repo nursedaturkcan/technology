@@ -1,0 +1,39 @@
+// ====resett=======
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// =====ekran boyuna göre yazıların fz ayarının yapılması===
+html {
+    font-size: 62.5%;
+
+    @include responsive(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include responsive(tab-port) {
+        font-size: 50%;
+    }
+
+    @include responsive(big-desktop){
+        font-size: 75%;
+    }
+
+    
+}
+
+body{
+    box-sizing: border-box;
+    padding: 48px;
+    @include responsive(tab-port){
+        padding:0;
+    }
+}
+// ===mouse ile yazıyı seçtiğinde==========
+::selection{
+    background-color: $color-primary;
+    color: $color-white;
+}

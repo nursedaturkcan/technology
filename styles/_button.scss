@@ -1,0 +1,128 @@
+// @import 'variables';
+// butonların düzenlenmesi
+.btn {
+
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    // border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: $default-font-size;
+    border: none;
+    cursor: pointer;
+    background-color: $color-white;
+    color: $color-gray-dark;
+    position: relative;
+
+    &:hover {
+        color: $color-primary;
+        letter-spacing: .3rem;
+    }
+
+    // https://www.youtube.com/watch?v=KlcVwxes3-0 den yardım aldım.
+
+
+    // kırmızı çizginin yapılması
+    &::before {
+        content: '';
+        // content inline eleman old. için block elemana çevirilmeilir.
+        display: block;
+        // çizgilerin yapılması
+        height: 4px;
+        width: 100%;
+        background-color: red;
+        position: absolute;
+        top: 1px;
+        left: 0;
+        // hover olmadan görünmemesi için ölçeklendirme sıfırlandı
+        transform: scale(0);
+        // x ve y eksininde 0 a 0 dan hover olduğunda,57 px e geçirme
+        transform: translate(0px, 0px);
+        transition: all .5s ease-in-out;
+
+    }
+
+    // siyah çizginin yapılması
+    &::after {
+        content: '';
+        // content inline eleman old. için block elemana çevirilmeilir.
+        display: block;
+        // çizgilerin yapılması
+        height: 4px;
+        width: 100%;
+        background-color: $color-primary-dark;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        // hover olmadan görünmemesi için ölçeklendirme sıfırlandı
+        transform: scale(0);
+        transform: translate(0px, 0px);
+        transition: all .5s ease-in-out;
+    }
+
+    &:hover::before //btn'e hover olduğunda before'u
+
+        {
+        // hover olduğunda görünür yapmak
+        transform: scale(1);
+        transform: translate(0px, 57px);
+
+    }
+
+    &:hover::after //btn'e hover olduğunda after'ı
+
+        {
+        // hover olduğunda görünür yapmak
+        transform: scale(1);
+        transform: translate(0px, -57px);
+
+    }
+}
+
+
+
+// btn-text classının düzenlemsi
+.btn-text {
+
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 10px;
+    transition: all .2s;
+    border: 3rem;
+    background-color: $color-tretiary-dark;
+    color: $color-white;
+    margin-top: 5px;
+    position: relative;
+    margin-left: 200px;
+    &:hover{
+        letter-spacing: 1px;
+    }
+
+    &::before{
+        content: '';
+        // animasyonun butonun tamamını kapsaması için
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -2222222;
+        border: 3px solid $color-gray-dark;
+        transition: all .2s ease-in-out ;
+
+    }
+    &:hover::before{
+        top: -6px;
+        bottom: -6px;
+        right: -6px;
+        left: -6px;
+        
+
+    }
+
+}

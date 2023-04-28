@@ -1,0 +1,43 @@
+@keyframes moveInleft{
+    // başlangıçta
+    0%{
+opacity: 0;
+transform: translateX(-10rem);
+    }
+    80%{
+        transform: translateX(1rem);
+    }
+    // bitişinde
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInright{
+    // başlangıçta
+    0%{
+opacity: 0;
+transform: translateX(10rem);
+    }
+    80%{
+        transform: translateX(-1rem);
+    }
+    // bitişinde
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInbottom{
+    // başlangıçta
+    0%{
+opacity: 0;
+transform: translateY(3rem);
+    }
+    
+    // bitişinde
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}

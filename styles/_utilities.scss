@@ -1,0 +1,29 @@
+
+
+// ===== bazı sınıflara belirli özelliklerin verilmesi ve bu özellikte olmasını istediğim html elementlerine bu class'ların verilmesi
+// ====margin top ve margin-bottom özellikleri
+.u-center-text{
+    text-align: center !important;
+}
+
+.u-margin-bottom-small{
+    margin-bottom: 24px !important;
+}
+.u-margin-bottom-medium{
+    margin-bottom: 64px !important;
+    // @include responsive(tab-port){
+    //     margin-bottom: 48px !important;
+    // };
+}
+.u-margin-bottom-big{
+    margin-bottom: 128px !important;
+    // @include responsive("tab-port"){
+    //     margin-bottom:80px !important ;
+    // }
+}
+.u-margin-top-big{
+    margin-top: 128px !important;
+}
+.u-margin-top-huge{
+    margin-bottom: 160px !important;
+}
